@@ -9,11 +9,7 @@ const ColorSelector = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(
-    ${(props) => props.redCode},
-    ${(props) => props.greenCode},
-    ${(props) => props.blueCode}
-  );
+  background-color: ${(props) => props.color};
   & .color-selector-panel {
     width: 30%;
     background-color: #ddd;
@@ -38,23 +34,27 @@ const ColorSelector = styled.div`
   & .hex-color-code .selected-color {
     width: 3rem;
     height: 3rem;
-    background-color: rgb(
-      ${(props) => props.redCode},
-      ${(props) => props.greenCode},
-      ${(props) => props.blueCode}
-    );
-    border: 2px solid
-      rgb(
-        ${(props) => props.redCode - 77},
-        ${(props) => props.greenCode - 107},
-        ${(props) => props.blueCode - 222}
-      );
+    background-color: ${(props) => props.color};
+    border: 2px solid #000;
   }
   & .hex-copy{
     padding: .5rem 1rem;
     background-color: #000;
     color:white;
     cursor: pointer;
+  }
+  & .author-desc{
+    padding-top:1rem;
+    grid-column: 1/3;
+    & p{
+      text-align:center;
+      font-size:1rem;
+      & a{
+        text-decoration:underline;
+        color:#3CBAFF;
+        font-style: oblique;
+      }
+    }
   }
 `;
 
@@ -86,7 +86,7 @@ function App() {
     setCopy(true);
   };
   return (
-    <ColorSelector redCode={red} greenCode={green} blueCode={blue}>
+    <ColorSelector color={hexString}>
       <div className="color-selector-panel">
         <header>
           <h1>Select Color</h1>
@@ -124,6 +124,9 @@ function App() {
             <button onClick={copyOnClickHandler} className="hex-copy">
               {copy ? "Copied!" : "Copy"}
             </button>
+          </div>
+          <div className="author-desc">
+            <p>Designed & Developed<a href="https://github.com/biswajitatgithub" target="_blank" rel="noreferrer" > <br/>by Biswajit Sharma</a></p>
           </div>
         </div>
       </div>
