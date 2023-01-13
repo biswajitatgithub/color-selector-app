@@ -55,6 +55,7 @@ const SliderInput = (props) => {
           min={props.min}
           max={props.max}
           onChange={sliderChangeHandler}
+          defaultValue = "0"
         />
         <span className="max">{props.max}</span>
       </div>
