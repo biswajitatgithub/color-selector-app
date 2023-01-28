@@ -15,6 +15,12 @@ const ColorSelector = styled.div`
     background-color: #ddd;
     padding: 2rem;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    @media(max-width: 1024px){
+      width:50%;
+    }
+    @media(max-width: 520px){
+      width:75%;
+    }
     & .color {
       display: grid;
       grid-auto-flow: row;
