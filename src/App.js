@@ -132,7 +132,7 @@ function App() {
             </button>
           </div>
           <div className="author-desc">
-            <p>Designed & Developed<a href="https://github.com/biswajitatgithub" target="_blank" rel="noreferrer" > <br/>by Biswajit Sharma</a></p>
+            <p>Designed and Developed<a href="https://github.com/biswajitatgithub" target="_blank" rel="noreferrer" > <br/>by Biswajit Sharma</a></p>
           </div>
         </div>
       </div>
